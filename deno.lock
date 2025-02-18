@@ -1,0 +1,11 @@
+{
+  "version": "4",
+  "redirects": {
+    "https://esm.sh/@types/jquery@~3.5.32/index.d.ts": "https://esm.sh/@types/jquery@3.5.32/index.d.ts",
+    "https://esm.sh/jquery": "https://esm.sh/jquery@3.7.1"
+  },
+  "remote": {
+    "https://esm.sh/jquery@3.7.1": "39693088d4999f842ee11ad11b7c1d10f32ec4b4de8e56fda2f912df780fc18b",
+    "https://esm.sh/jquery@3.7.1/denonext/jquery.mjs": "eb0d70bea10036954c24697fcd40ce14e75f575858f3f7649ce495ab28b680b5"
+  }
+}
