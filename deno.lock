@@ -2,10 +2,16 @@
   "version": "4",
   "redirects": {
     "https://esm.sh/@types/jquery@~3.5.32/index.d.ts": "https://esm.sh/@types/jquery@3.5.32/index.d.ts",
-    "https://esm.sh/jquery": "https://esm.sh/jquery@3.7.1"
+    "https://esm.sh/jquery": "https://esm.sh/jquery@3.7.1",
+    "https://esm.sh/js-confetti": "https://esm.sh/js-confetti@0.12.0",
+    "https://esm.sh/nanostores": "https://esm.sh/nanostores@0.11.4"
   },
   "remote": {
     "https://esm.sh/jquery@3.7.1": "39693088d4999f842ee11ad11b7c1d10f32ec4b4de8e56fda2f912df780fc18b",
-    "https://esm.sh/jquery@3.7.1/denonext/jquery.mjs": "eb0d70bea10036954c24697fcd40ce14e75f575858f3f7649ce495ab28b680b5"
+    "https://esm.sh/jquery@3.7.1/denonext/jquery.mjs": "eb0d70bea10036954c24697fcd40ce14e75f575858f3f7649ce495ab28b680b5",
+    "https://esm.sh/js-confetti@0.12.0": "5d9f42de71700c002f2c0ab36c8dddb61ef8afe7e03638edd0733eae738fc3d7",
+    "https://esm.sh/js-confetti@0.12.0/denonext/js-confetti.mjs": "e2bfbea376d366bf4c50e7626d888dd13ba2fbf99881b85fb6615d2afd975bfc",
+    "https://esm.sh/nanostores@0.11.4": "090eb82118635dd654d2bd983741bd6dc2a809af96ea175c896da7fc1a34ebd8",
+    "https://esm.sh/nanostores@0.11.4/denonext/nanostores.mjs": "0f3a82d0a93671bbb67887a02d3b1eff7fb93654add5e3d654d2278265902539"
   }
 }
