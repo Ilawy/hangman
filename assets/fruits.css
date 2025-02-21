@@ -1,0 +1,17 @@
+:root {
+    --accent: #d91d1b;
+    --secondary: #d91d1b;
+    --accent-fg: white;
+    --bg: url("/assets/fruits.jpg");
+    --key-bg: var(--secondary);
+    --key-fg: white;
+
+    --container-fg: black;
+    --container-bg: #eeeeee60;
+}
+
+body {}
+
+.game-container {
+    /* display: none; */
+}

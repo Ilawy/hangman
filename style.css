@@ -4,25 +4,30 @@
     box-sizing: border-box;
 }
 
+html {}
+
 body {
-    background: #f8f3d9;
     display: flex;
+    background: var(--bg, #f8f3d9) no-repeat center center fixed;
+    background-size: 100vw;
+    background-position: center;
+    background-size: cover;
+    height: fit-content;
 
     flex-direction: column;
     font-family: sans-serif;
     width: 100vw;
 }
 
-body:has(main)::after {
+/* body:has(main)::after {
     content: "";
     position: fixed;
     width: 100%;
     height: 100%;
     z-index: -1;
     background: url("bg.jpg") no-repeat center center fixed;
-    /* background-size: contain; */
     filter: blur(9px) saturate(70%);
-}
+} */
 
 @media screen and (max-height: 720px) {
     body {
@@ -44,9 +49,18 @@ body:has(main)::after {
     gap: 1rem;
     margin-top: 2rem;
     width: 90ch;
-    margin: 0 auto;
+    margin: 1rem auto;
+    border-radius: 1rem;
     padding: 1rem;
     flex: 1;
+    box-shadow:
+        4.5px 4.5px 3.6px rgba(0, 0, 0, 0.017),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.025),
+        30.1px 30.1px 24.1px rgba(0, 0, 0, 0.033),
+        100px 100px 80px rgba(0, 0, 0, 0.05);
+
+    backdrop-filter: blur(8px);
+    background: var(--container-bg, #00000030);
 
     @media screen and (max-width: 600px) {
         width: 30px;
@@ -67,9 +81,9 @@ body:has(main)::after {
     select {
         grid-column: 1 / 3;
         text-align: center;
-        background: #3e3a28;
-        color: white;
-        border: 3px solid #b9b28a;
+        background: var(--accent, #3e3a28);
+        color: var(--accent-fg, white);
+        border: 2px solid var(--accent-fg, #b9b28a);
         padding: 0.5rem 1rem;
         border-radius: 0.75rem;
     }
@@ -84,10 +98,10 @@ body:has(main)::after {
     font-size: 1.2rem;
     font-weight: bold;
     padding: 1rem;
-    color: #504b38;
+    color: var(--container-fg, #504b38);
     width: 100%;
     margin: 0 auto;
-    border: 4px solid #504b38;
+    border: 4px solid var(--accent, #504b38);
     border-radius: 1rem;
     padding: 1rem;
     display: grid;
@@ -101,11 +115,11 @@ body:has(main)::after {
         grid-row: 3 / 4;
         font-size: 1.15rem;
         padding: 0.5rem 1.25rem;
-        background: #504b38;
-        color: #f8f3d9;
+        background: var(--accent);
+        color: var(--accent-fg, #f8f3d9);
         width: 100%;
         font-weight: bold;
-        border: 2px solid #f8f3d9;
+        border: 2px solid var(--accent-fg, #f8f3d9);
         border-radius: 0.5rem;
         &:disabled {
             background: #aaa;
@@ -118,11 +132,11 @@ body:has(main)::after {
         grid-row: 3 / 4;
         font-size: 1.15rem;
         padding: 0.5rem 1.25rem;
-        background: #504b38;
-        color: #f8f3d9;
+        background: var(--accent, #504b38);
+        color: var(--accent-fg, #f8f3d9);
         width: 100%;
         font-weight: bold;
-        border: 2px solid #f8f3d9;
+        border: 2px solid currentColor;
         border-radius: 0.5rem;
         &:disabled {
             background: #aaa;
@@ -173,16 +187,20 @@ body:has(main)::after {
         ". z x c v b n m . .";
     max-width: 45ch;
     gap: var(--gap);
-    height: 0;
+    height: fit-content;
+    width: 100%;
+    grid-column: 1 / 4;
+    transform: translateX(-12.5%);
 
     @media screen and (max-width: 600px) {
         --gap: 0.5rem;
         --key-size: 32px;
+        transform: translateX(0);
     }
 
     .key {
-        background: #504b38;
-        color: white;
+        background: var(--key-bg, #504b38);
+        color: var(--key-fg, white);
         aspect-ratio: 1;
         padding: 0.5rem;
         max-width: var(--key-size);
@@ -328,6 +346,22 @@ body:has(main)::after {
     display: none;
     transform-origin: right left;
     transition: 0.25s;
+}
+
+.sad_el,
+.happy_el,
+#arm_r,
+#arm_l,
+#leg_r,
+#leg_l,
+#body {
+    fill: var(--human, black);
+}
+
+.face_el,
+.sad_el,
+.happy_el {
+    stroke: var(--human, black);
 }
 
 .human.dancing {

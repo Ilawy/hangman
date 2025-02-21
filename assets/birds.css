@@ -1,0 +1,10 @@
+:root {
+    --accent: #83a1be;
+    --secondary: #4b746f;
+    --accent-fg: white;
+    --bg: url("/assets/birds.jpg");
+    --key-bg: var(--secondary);
+    --key-fg: white;
+
+    --container-fg: white;
+}
